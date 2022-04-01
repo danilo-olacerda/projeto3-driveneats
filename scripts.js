@@ -245,9 +245,21 @@ function botaoConfirmacao() {
 }
 function confirmar() {
     let valor = valorComida+valorBebida+valorSobremesa;
+    let auxC=valorComida, auxB=valorBebida, auxS=valorSobremesa;
+    valor = (valor).toFixed(2);
+    valor = valor.replace(".", ',');
 
     nome = prompt("Qual o seu nome completo ?");
     endereco = prompt("Qual o seu endereço ?");
+
+    valorComida=(valorComida).toFixed(2);
+    valorComida=valorComida.replace(".", ',')
+
+    valorBebida=(valorBebida).toFixed(2);
+    valorBebida=valorBebida.replace(".", ',')
+
+    valorSobremesa=(valorSobremesa).toFixed(2);
+    valorSobremesa=valorSobremesa.replace(".", ',')
 
     document.getElementById("comida-final").innerHTML = comida;
     document.getElementById("comida-valor").innerHTML = valorComida;
@@ -262,6 +274,10 @@ function confirmar() {
 
     document.getElementById("tela-final").className += " flex";
     document.getElementById("checkout").className += " aparecer";
+
+    valorComida=auxC;
+    valorBebida=auxB;
+    valorSobremesa=auxS;
 }
 function voltar() {
     document.getElementById("tela-final").classList.remove("flex");
@@ -270,12 +286,12 @@ function voltar() {
 function enviarMensagem () {
     let string = 
     `Olá, gostaria de fazer o pedido:
-    - Prato: ${comida}
-    - Bebida: ${bebida}
-    - Sobremesa: ${sobremesa}
-    Total: R$ ${(valorBebida+valorComida+valorSobremesa).toFixed(2)}
-    \n\nNome: ${nome}
-    Endereço: ${endereco}`
+- Prato: ${comida}
+- Bebida: ${bebida}
+- Sobremesa: ${sobremesa}
+Total: R$ ${(valorBebida+valorComida+valorSobremesa).toFixed(2)}
+\nNome: ${nome}
+Endereço: ${endereco}`
     string = encodeURIComponent(string);
     window.open("https://wa.me/5532991745402?text="+string);
 }
