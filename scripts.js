@@ -1,6 +1,7 @@
 let comida=0, valorComida=0;
 let bebida=0, valorBebida=0;
 let sobremesa=0, valorSobremesa=0;
+let nome, endereco;
 /* Escolher Comida*/
 function escolherSmash() {
     document.getElementById("smash").className += " check-prato";
@@ -45,7 +46,7 @@ function escolherTaco() {
     document.getElementById("taco").className += " check-prato";
     document.getElementById("smash").className = document.getElementById("smash").className.replace( /(?:^|\s)check-prato(?!\S)/g , '' );
     document.getElementById("pizza").className = document.getElementById("pizza").className.replace( /(?:^|\s)check-prato(?!\S)/g , '' );
-    document.getElementById("smash").className = document.getElementById("smash").className.replace( /(?:^|\s)check-prato(?!\S)/g , '' );
+    document.getElementById("rato").className = document.getElementById("rato").className.replace( /(?:^|\s)check-prato(?!\S)/g , '' );
     document.getElementById("nuggets").className = document.getElementById("nuggets").className.replace( /(?:^|\s)check-prato(?!\S)/g , '' );
     document.getElementById("churrasco").className = document.getElementById("churrasco").className.replace( /(?:^|\s)check-prato(?!\S)/g , '' );
     comida="Taco";
@@ -73,7 +74,7 @@ function escolherChurrasco() {
     document.getElementById("pizza").className = document.getElementById("pizza").className.replace( /(?:^|\s)check-prato(?!\S)/g , '' );
     document.getElementById("taco").className = document.getElementById("taco").className.replace( /(?:^|\s)check-prato(?!\S)/g , '' );
     document.getElementById("nuggets").className = document.getElementById("nuggets").className.replace( /(?:^|\s)check-prato(?!\S)/g , '' );
-    document.getElementById("smash").className = document.getElementById("smash").className.replace( /(?:^|\s)check-prato(?!\S)/g , '' );
+    document.getElementById("rato").className = document.getElementById("rato").className.replace( /(?:^|\s)check-prato(?!\S)/g , '' );
     comida="Churrasco";
     valorComida=25.00;
     if (comida!=0 && bebida !=0 && sobremesa !=0){
@@ -245,6 +246,9 @@ function botaoConfirmacao() {
 function confirmar() {
     let valor = valorComida+valorBebida+valorSobremesa;
 
+    nome = prompt("Qual o seu nome completo ?");
+    endereco = prompt("Qual o seu endereço ?");
+
     document.getElementById("comida-final").innerHTML = comida;
     document.getElementById("comida-valor").innerHTML = valorComida;
 
@@ -254,12 +258,24 @@ function confirmar() {
     document.getElementById("sobremesa-final").innerHTML = sobremesa;
     document.getElementById("sobremesa-valor").innerHTML = valorSobremesa;
 
-    document.getElementById("valor-total").innerHTML = "R$ "+valor;
-
-
+    document.getElementById("valor-total").innerHTML = "R$ "+ valor;
 
     document.getElementById("tela-final").className += " flex";
     document.getElementById("checkout").className += " aparecer";
-
 }
-prompt("Olá");
+function voltar() {
+    document.getElementById("tela-final").classList.remove("flex");
+    document.getElementById("checkout").classList.remove("aparecer");
+}
+function enviarMensagem () {
+    let string = 
+    `Olá, gostaria de fazer o pedido:
+    - Prato: ${comida}
+    - Bebida: ${bebida}
+    - Sobremesa: ${sobremesa}
+    Total: R$ ${(valorBebida+valorComida+valorSobremesa).toFixed(2)}
+    \n\nNome: ${nome}
+    Endereço: ${endereco}`
+    string = encodeURIComponent(string);
+    window.open("https://wa.me/5532991745402?text="+string);
+}
