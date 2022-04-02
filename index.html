@@ -13,7 +13,6 @@
 </head>
 <body>
 
-
     <main>
         <div class="container-topo">
             <h1>DrivenEats</h1>
@@ -23,42 +22,42 @@
             <div class="opcao">
                 <h3>Primeiro, seu prato</h3>
                 <div class="pratos">
-                    <div id="smash" class="prato" onclick="escolherSmash()">
+                    <div class="prato" onclick="escolherPrato(this, 16.50,'Smash Burguer')">
                         <img src="midia/smash.jpg">
                         <h3>Smash Burguer</h3>
                         <h4>Clássico Smash</h4>
                         <h5>R$ 16,50</h5>
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
-                    <div id="rato" class="prato" onclick="escolherRato()">
+                    <div class="prato" onclick="escolherPrato(this, 100,'Sanduba de Rato')">
                         <img src="midia/ratinho-hamburguer.jpg">
-                        <h3>Sanduba de Rato</h3>
+                        <h3 class="teste">Sanduba de Rato</h3>
                         <h4>Descendente direto do Stuart Little!</h4>
                         <h5>R$ 100,00</h5>
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
-                    <div id="pizza" class="prato" onclick="escolherPizza()">
+                    <div class="prato" onclick="escolherPrato(this, 40, 'Pizza')">
                         <img src="midia/pizza.jpg">
                         <h3>Pizza</h3>
                         <h4>Pizza sabor pizza</h4>
                         <h5>R$ 40,00</h5>
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
-                    <div id="taco" class="prato" onclick="escolherTaco()">
+                    <div class="prato" onclick="escolherPrato(this, 11.50, 'Taco')">
                         <img src="midia/taco.png">
                         <h3>Taco</h3>
                         <h4>Recheado com coisas</h4>
                         <h5>R$ 11,50</h5>
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
-                    <div id="nuggets" class="prato" onclick="escolherNuggets()">
+                    <div class="prato" onclick="escolherPrato(this, 21.90, 'Nuggets')">
                         <img src="midia/nuggets.jpg">
                         <h3>Nuggets</h3>
                         <h4>Nuggets de "frango"</h4>
                         <h5>R$ 21,90</h5>
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
-                    <div id="churrasco" class="prato" onclick="escolherChurrasco()">
+                    <div class="prato" onclick="escolherPrato(this, 25.00, 'Churrasco')">
                         <img src="midia/churrasco.jpg">
                         <h3>Churrasco</h3>
                         <h4>Espetinhos diversos (5 un.)</h4>
@@ -67,43 +66,43 @@
                     </div>
                 </div>
                 <h3>Agora, sua bebida</h3>
-                <div class="pratos">
-                    <div id="coca" class="prato" onclick="escolherCoca()">
+                <div class="bebidas">
+                    <div class="prato" onclick="escolherBebida(this,3.9,'Coca lata')">
                         <img src="midia/coca.jpg">
                         <h3>Coca lata</h3>
                         <h4>Coquinha gelada 350ml</h4>
                         <h5>R$ 3,90</h5>
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
-                    <div id="sprite" class="prato" onclick="escolherSprite()">
+                    <div class="prato" onclick="escolherBebida(this,3,'Sprite lata')">
                         <img src="midia/sprite.jpg">
                         <h3>Sprite lata</h3>
                         <h4>Sprite gelada 350ml</h4>
                         <h5>R$ 3,00</h5>
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
-                    <div id="tamarindo" class="prato" onclick="escolherTamarindo()">
+                    <div class="prato" onclick="escolherBebida(this, 30, 'Suco de tamarindo')">
                         <img src="midia/tamarindo.jpg">
                         <h3>Suco de tamarindo</h3>
                         <h4>com gosto de maçã e cheiro de pera</h4>
                         <h5>R$ 30,00</h5>
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
-                    <div id="cha" class="prato" onclick="escolherCha()">
+                    <div class="prato" onclick="escolherBebida(this,8,'Chá gelado')">
                         <img src="midia/chá.jpg">
                         <h3>Chá gelado</h3>
                         <h4>As vezes 500ml outras 200ml</h4>
                         <h5>R$ 8,00</h5>
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
-                    <div id="terra" class="prato" onclick="escolherTerra()">
+                    <div class="prato" onclick="escolherBebida(this,1,'Suco de terra')">
                         <img src="midia/suco-de-terra.jpg.opdownload">
                         <h3>Suco de terra</h3>
                         <h4>Fortalece o sistema imunológico</h4>
                         <h5>R$ 1,00</h5>
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
-                    <div id="yakult" class="prato" onclick="escolherYakult()">
+                    <div class="prato" onclick="escolherBebida(this,0.5,'Yakult')">
                         <img src="midia/yakult.jpg">
                         <h3>Yakult</h3>
                         <h4>Com lactobacilos vivos</h4>
@@ -112,43 +111,43 @@
                     </div>
                 </div>
                 <h3>Por fim, sua sobremesa</h3>
-                <div class="pratos">
-                    <div id="acai" class="prato" onclick="escolherAcai()">
+                <div class="sobremesas">
+                    <div class="prato" onclick="escolherSobremesa(this, 10, 'Açai')">
                         <img src="midia/acai.jpg">
                         <h3>Açai</h3>
                         <h4>Açaí puro batido com xarope de guaraná</h4>
                         <h5>R$ 10,00</h5>
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
-                    <div id="sorvete" class="prato" onclick="escolherSorvete()">
+                    <div class="prato" onclick="escolherSobremesa(this, 11.90,'Sorvete')">
                         <img src="midia/sorvete.jpg">
                         <h3>Sorvete</h3>
                         <h4>Sorvete, colorido, gelado, sorvete.</h4>
                         <h5>R$ 11,90</h5>
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
-                    <div id="minhoca" class="prato" onclick="escolherMinhoca()">
+                    <div class="prato" onclick="escolherSobremesa(this, 15.90,'Minhoca Doce')">
                         <img src="midia/minhoca-doce.jpg">
                         <h3>Minhoca Doce</h3>
                         <h4>Confia, é doce</h4>
                         <h5>R$ 15,90</h5>
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
-                    <div id="pudim" class="prato" onclick="escolherPudim()">
+                    <div class="prato" onclick="escolherSobremesa(this, 20.90,'Pudim')">
                         <img src="midia/pudim.jpg">
                         <h3>Pudim</h3>
                         <h4>Puft, pudim amassado!</h4>
                         <h5>R$ 20,90</h5>
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
-                    <div id="alfajor" class="prato" onclick="escolherAlfajor()">
+                    <div class="prato" onclick="escolherSobremesa(this, 5,'Alfajor')">
                         <img src="midia/alfajor.jpg.opdownload">
                         <h3>Alfajor</h3>
                         <h4>Coberto de chocolate</h4>
                         <h5>R$ 5,00</h5>
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
-                    <div id="banana" class="prato" onclick="escolherBanana()">
+                    <div class="prato" onclick="escolherSobremesa(this, 2,'Banana')">
                         <img src="midia/banana.jpg">
                         <h3>Banana</h3>
                         <h4>Lanche com banana, equilíbrio é tudo!</h4>
@@ -159,11 +158,6 @@
             </div>
         </div>
 
-
-
-
-
-
         <div class="container-baixo">
 
             <button id="bot-nconfirm" class="pedido"><h3>Selecione os 3 itens para fechar o pedido</h3></button>
@@ -171,7 +165,6 @@
 
         </div>
     </main>
-
 
     <div id="tela-final" class="confirm-back">
 
@@ -205,8 +198,6 @@
         </div>
 
     </div>
-
-
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

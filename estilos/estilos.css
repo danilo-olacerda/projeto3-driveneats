@@ -54,7 +54,7 @@ body {
 .opcao > div:last-child {
     margin-bottom: 108px;
 }
-.pratos {
+.pratos, .bebidas, .sobremesas {
     display: flex;
     width: 100%;
     overflow-x: scroll;
@@ -141,7 +141,6 @@ body {
     position: fixed;
     z-index: 1;
     background: rgba(255, 255, 255, 0.9);
-    display: flex;
     justify-content: center;
     align-items: center;
     display: none;
@@ -205,6 +204,7 @@ body {
 }
 .confirmar {
     background: #FFFFFF;
+    border: none;
     border-radius: 100px;
     width: 100%;
     margin-bottom: 20px;
